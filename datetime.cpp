@@ -6,6 +6,7 @@
 #include "windows.h"
 #include "note.h"
 #include "dialog.h"
+#include "lengthen.h"
 
 dateTime::dateTime(QWidget *parent) :
     QDialog(parent),
@@ -22,7 +23,7 @@ dateTime::dateTime(QWidget *parent) :
 
         //创建定时器定时更新时间和日期
         timer = new QTimer(this);
-        connect(timer, SIGNAL(timeout()), this, SLOT(myslot()));
+       // connect(timer, SIGNAL(timeout()), this, SLOT(myslot()));
         connect(timer, &QTimer::timeout, this, &dateTime::timeUpdate);
         timer->start(1000);
 }
@@ -87,11 +88,11 @@ void dateTime::timeUpdate(void)
 
 }
 
-void dateTime::myslot()
-{
-    show();                                            //计时到，再次显示
-    timer->stop();
-}
+//void dateTime::myslot()
+//{
+ //   show();                                            //计时到，再次显示
+ //   timer->stop();
+//}
 
 void dateTime::on_pushButton_clicked()
 {
@@ -100,9 +101,12 @@ void dateTime::on_pushButton_clicked()
 
 void dateTime::on_pushButton_2_clicked()
 {
-    hide();                                             //计时开始，界面隐藏
-    int num = 600;                                      //计时秒数（600秒）
-    num *= 1000;
-    timer->start(num);
+    //hide();                                             //计时开始，界面隐藏
+    //int num = 600;                                      //计时秒数（600秒）
+    //num *= 1000;
+    //timer->start(num);
+    lengthen *timing = new lengthen;
+    timing->show();
+    hide();
 }
 

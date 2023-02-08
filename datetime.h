@@ -42,7 +42,7 @@ private slots:
 
     void on_pushButton_2_clicked();
 
-    void myslot();
+   // void myslot();
 
 private:
     Ui::dateTime *ui;

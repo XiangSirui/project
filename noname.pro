@@ -20,6 +20,7 @@ SOURCES += \
     addnew.cpp \
     datetime.cpp \
     history.cpp \
+    lengthen.cpp \
     main.cpp \
     dialog.cpp \
     note.cpp \
@@ -31,6 +32,7 @@ HEADERS += \
     datetime.h \
     dialog.h \
     history.h \
+    lengthen.h \
     note.h \
     vector_.h
 
@@ -40,6 +42,7 @@ FORMS += \
     datetime.ui \
     dialog.ui \
     history.ui \
+    lengthen.ui \
     note.ui
 
 # Default rules for deployment.
